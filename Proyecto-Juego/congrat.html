@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jungle Expedition</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<script type="text/javascript" src="jugadores.js"></script>
+<script type="text/javascript">
+	
+function init() {
+		var h1= document.getElementById("con");
+		h1.innerHTML =localStorage.getItem("name");
+		var h2=document.getElementById("pun");
+		h2.innerHTML="Mejor puntaje: "+localStorage.getItem("puntaje");
+		var h3=document.getElementById("tie");
+		h3.innerHTML="Mejor Tiempo: "+localStorage.getItem("tiempo")+" Segundos";
+}
+	window.addEventListener("load",init,false);
+</script>
+<body>
+	<div class="col-10 center gamecontainer">
+	<div class="row">
+    	<div class="container col-12">
+    		<div class="col-10 center">
+				<h1 class="center col-10" id="logo">Felicidades, has ganado!!!</h1>
+    			<h2 class="center col-10" id="con"></h2>
+				<h2 class="center col-10" id="pun"></h2>
+				<h2 class="center col-10" id="tie"></h2>
+    			<a href="index.html" class="center col-10" id="volverbtn">Volver a jugar</a>
+				<a href="jugadores.html" class="center col-10" id="volverbtn">Mejores Jugadores</a>
+			</div>
+    	</div>
+    </div>
+	</div>
+</body>
+</html>

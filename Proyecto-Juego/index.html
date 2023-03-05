@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jungle Expedition</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<script>
+
+	var mInicio;
+	var aS = new Audio("sounds/fondo.mp3");
+	var aI = new Image(100,100);
+	
+	window.onload = function logo(){
+		var canvas = document.getElementById("lienzo");
+		var ctx =  canvas.getContext("2d");
+		var img = document.getElementById("logotipo");
+		ctx.drawImage(img, 10, 10);
+	}
+
+	function iniciar(){
+		var aS = new Audio('sounds/5.mp3');
+		aS.play(aS);
+		setTimeout( function() { window.location.href = "menu.html"; }, 3500 );
+	}
+</script>
+<body>
+	<div class="col-10 center gamecontainer" id="creditcontainer">
+	<div class="row">
+    	<div class="container col-12" >
+    		<div class="col-10 center">
+				<canvas id="lienzo" width="900" height="500"></canvas>
+				<a href="#" class="center col-10" id="jugarbtn" onclick="iniciar()">Iniciamos la aventura, pulsa aquí para empezar</a>
+				<a href="#" class="center col-10" id="jugarbtn" onclick="musica()"><p id="musica">Musica</p></a>
+    		</div>
+			<section id="oculto" style="display: none;">
+				<img id="logotipo" src="images/logotipo.jpeg">
+			</section>
+    	</div>
+    </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jungle Expedition</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<body>
+<script type="text/javascript">
+    window.onload = function imprimir(){
+        var h1= document.getElementById("con");
+		h1.innerHTML =localStorage.getItem("name");
+		var h2=document.getElementById("pun");
+		h2.innerHTML="Mejor puntaje: "+localStorage.getItem("puntaje");
+		var h3=document.getElementById("tie");
+		h3.innerHTML="Mejor Tiempo: "+localStorage.getItem("tiempo")+" Segundos";
+    }
+	function juego() {
+        setTimeout( function() { window.location.href = "game.html"; }, 1000 );
+	}
+	function borrar(){
+		localStorage.removeItem("name");
+		localStorage.removeItem("puntaje");
+		localStorage.removeItem("tiempo");
+		setTimeout( function() { window.location.href = "index.html"; }, 1000 );
+	}
+</script>
+	<div class="col-10 center gamecontainer">
+	<div class="row">
+    	<div class="container col-12">
+    		<div class="col-10 center">
+    			<h1 class="center col-10" id="con"></h1>
+				<h2 class="center col-10" id="pun"></h2>
+				<h2 class="center col-10" id="tie"></h2>
+                <p><a href="#" class="center col-10" id="jugarbtn" onclick="juego()">Jugar</a><a href="#" class="center col-10" id="creditosbtn" onclick="borrar()">Borrar Jugador</a></p>
+    		</div>
+    	</div>
+    </div>
+	</div>
+</body>
+</html>

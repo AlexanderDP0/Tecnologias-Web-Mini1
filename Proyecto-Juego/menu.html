@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jungle Expedition</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<body>
+<script type="text/javascript">
+	function initjuego() {
+		if(localStorage.getItem("name") != undefined){
+			setTimeout( function() { window.location.href = "puntajes.html"; }, 1000 );
+		}else{
+			var textfield = document.getElementById('nombre').value;
+			localStorage.setItem("name",textfield);
+			localStorage.setItem("puntaje",0);
+			localStorage.setItem("tiempo",0);
+			setTimeout( function() { window.location.href = "puntajes.html"; }, 1000 );
+		}
+	}
+</script>
+	<div class="col-10 center gamecontainer">
+	<div class="row">
+    	<div class="container col-12">
+    		<div class="col-10 center">
+    			<h1 class="center col-10" id="logo">Jungle Expedition</h1>
+    			<h3 class="center col-10" id="nombrelab">Ingresa tu nombre</h3>
+    			<input type="text" name="nombre" class="center col-10" id="nombre">
+				<a href="#" class="center col-10" id="jugarbtn" onclick="musica()"><p id="musica">Musica</p></a>
+    			<a href="#" class="center col-10" id="jugarbtn" onclick="initjuego()">Jugar</a>
+    			<a href="credit.html" class="center col-10" id="creditosbtn">Creditos</a>
+    		</div>
+    	</div>
+    </div>
+	</div>
+</body>
+</html>

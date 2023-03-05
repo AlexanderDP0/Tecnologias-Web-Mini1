@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jungle Expedition</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+  function salir(){
+    setTimeout( function() { window.location.href = "index.html"; }, 1000 );
+  }
+
+</script>
+<body onload="carga()">
+  <div class="col-10 center gamecontainer">
+  <div class="row">
+    <div class="container col-12">
+      <div class="col-6"><h3 id="tie">Tiempo:<p id="segundos"></p></h3></div>
+      <div class="col-6"><h3 id="pun">Puntos:<p id="puntosAcum">0</p></h3></div>
+    </div>
+    <div class="container col-12">
+      <div class="animal col-2"></div>
+      <div class="animal col-2"></div>
+      <div class="animal col-2"></div>
+      <div class="animal col-2"></div>
+      <div class="animal col-2"></div>
+      <div class="animal col-2"></div>
+    </div>
+    </div>
+      <div class="row">
+    <div class="container col-12">
+      <div class="nombre col-2" id="n0"><h1 class="nombretext" id="nh0"></h1></div>
+      <div class="nombre col-2" id="n1"><h1 class="nombretext" id="nh1"></h1></div>
+      <div class="nombre col-2" id="n2"><h1 class="nombretext" id="nh2"></h1></div>
+      <div class="nombre col-2" id="n1"><h1 class="nombretext" id="nh1"></h1></div>
+      <div class="nombre col-2" id="n2"><h1 class="nombretext" id="nh2"></h1></div>
+      <div class="nombre col-2" id="n2"><h1 class="nombretext" id="nh2"></h1></div>
+    </div>
+    </div>
+  <div class="row">
+  <div class="source col-12">
+    <div class="row">
+
+    <div class="texto col-2" draggable="true"></div>
+
+    <div class="texto col-2" draggable="true"></div>
+
+    <div class="texto col-2" draggable="true"></div>
+
+    <div class="texto col-2" draggable="true"></div>
+
+    <div class="texto col-2" draggable="true"></div>
+
+    <div class="texto col-2" draggable="true"></div>
+    </div>
+    <p><a href="#" class="center col-10" id="jugarbtn" onclick="musica()"><p id="musica">Musica</p></a></p>
+    <a href="#" class="center col-10" id="jugarbtn" onclick="salir()">Salir del Juego</a>
+  <div class="opciones col-12">
+    <div class="row">
+    <div class="center col-10" draggable="true"><h2 id="siglvl" class="hidden">Exelente trabajo</h2></div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
